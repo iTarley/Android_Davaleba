@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/fragment_first">
+
+    <fragment
+        android:id="@+id/fragment_first"
+        android:name="com.example.davaleba5jan.fragment.fragment_first"
+        android:label="Home"
+        tools:layout="@layout/fragment_first" />
+    <fragment
+        android:id="@+id/fragment_second"
+        android:name="com.example.davaleba5jan.fragment.fragment_second"
+        android:label="Profile"
+        tools:layout="@layout/fragment_second" />
+    <fragment
+        android:id="@+id/fragment_third"
+        android:name="com.example.davaleba5jan.fragment.fragment_third"
+        android:label="About"
+        tools:layout="@layout/fragment_third" />
+    <fragment
+        android:id="@+id/fragment_fourth"
+        android:name="com.example.davaleba5jan.fragment.fragment_fourth"
+        android:label="Davaleba"
+        tools:layout="@layout/fragment_fourth" />
+</navigation>

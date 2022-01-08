@@ -9,12 +9,23 @@
         android:id="@+id/fragment_first"
         android:name="com.example.davaleba5jan.fragment.fragment_first"
         android:label="Home"
-        tools:layout="@layout/fragment_first" />
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_fragment_first_to_fragment_second"
+            app:destination="@id/fragment_second" />
+    </fragment>
+
     <fragment
         android:id="@+id/fragment_second"
         android:name="com.example.davaleba5jan.fragment.fragment_second"
         android:label="Profile"
-        tools:layout="@layout/fragment_second" />
+        tools:layout="@layout/fragment_second" >
+        <argument
+            android:name="name"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+
     <fragment
         android:id="@+id/fragment_third"
         android:name="com.example.davaleba5jan.fragment.fragment_third"

@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import androidx.navigation.Navigation
 import com.example.davaleba5jan.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -56,5 +59,26 @@ class fragment_first : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val btnsend = view.findViewById<Button>(R.id.btnsend)
+        val editnumber = view.findViewById<EditText>(R.id.editnumber)
+        val controller = Navigation.findNavController(view)
+
+
+        btnsend.setOnClickListener{
+            val number = editnumber.text.toString()
+            if (number.isEmpty()){
+                return@setOnClickListener
+            }
+            val finalnum = number.toInt()
+            val action = fragment_firstDirections.actionFragmentFirstToFragmentSecond(finalnum)
+            controller.navigate(action)
+
+        }
     }
 }

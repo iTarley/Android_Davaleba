@@ -61,7 +61,9 @@ class fragment_second : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.findViewById<TextView>(R.id.viewnumber).text=
-        fragment_secondArgs.fromBundle(requireArguments()).name.toString()
+        view.findViewById<TextView>(R.id.viewnumber).text =
+            fragment_secondArgs.fromBundle(requireArguments()).name.toString()
     }
+
+
 }

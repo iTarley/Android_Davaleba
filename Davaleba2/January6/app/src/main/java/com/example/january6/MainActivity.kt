@@ -70,7 +70,12 @@ class MainActivity : AppCompatActivity() {
 
             }
 
-            FirebaseAuth
+
+            if(email_input1.length()==0){
+                return@setOnClickListener
+
+            }else{
+                FirebaseAuth
                 .getInstance()
                 .createUserWithEmailAndPassword(email,password)
                 .addOnCompleteListener{task ->
@@ -81,6 +86,9 @@ class MainActivity : AppCompatActivity() {
                         Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
                     }
                 }
+
+            }
+
 
         }
         txtbtn.setOnClickListener(){
